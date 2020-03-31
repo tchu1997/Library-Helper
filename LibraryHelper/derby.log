@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Dec 08 16:46:53 PST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016e-e81f-9182-00000c247408 
+on database directory /Users/leduy/repos(GitHub)/151Project/LibraryHelper/database with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/Users/leduy/repos(GitHub)/151Project/LibraryHelper/dist/run695092253/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_231-b11
+user.dir=/Users/leduy/repos(GitHub)/151Project/LibraryHelper
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

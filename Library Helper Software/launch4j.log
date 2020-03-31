@@ -1,0 +1,40 @@
+
+
+Version:	3.12
+CmdLine:	C:\Users\duytr\iCloudDrive\Study\CS 151\Project\151Project\Library Helper Software\Library Helper.exe --l4j-debug
+WOW64:		yes
+Create mutex:	LibraryHelper
+Working dir:	C:\Users\duytr\iCloudDrive\Study\CS 151\Project\151Project\Library Helper Software\.
+Java min ver:	1.008.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\Program Files\Java\jre1.8.0_231\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_191
+Check launcher:	C:\Program Files\Java\jre1.8.0_191\bin\javaw.exe (OK)
+Match:		1.008.000_191
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_221
+Check launcher:	C:\Program Files\Java\jre1.8.0_221\bin\javaw.exe (OK)
+Match:		1.008.000_221
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_231
+Check launcher:	C:\Program Files\Java\jre1.8.0_231\bin\javaw.exe (OK)
+Match:		1.008.000_231
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_151
+Ignore:		1.008.000_151
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_152
+Ignore:		1.008.000_152
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_201
+Ignore:		1.008.000_201
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_231
+Ignore:		1.008.000_231
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Runtime used:	1.008.000_231 (64-bit)
+Launcher:	C:\Program Files\Java\jre1.8.0_231\bin\javaw.exe
+Launcher args:	-jar "C:\Users\duytr\iCloudDrive\Study\CS 151\Project\151Project\Library Helper Software\Library Helper.exe"
+Args length:	108/32768 chars
+Exit code:	0

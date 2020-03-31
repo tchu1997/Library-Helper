@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Dec 08 20:34:28 PST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016e-e8ef-ee28-00000c185378 
+on database directory C:\Users\duytr\iCloudDrive\Study\CS 151\Project\151Project\Library Helper Software\database with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/C:/Users/duytr/iCloudDrive/Study/CS%20151/Project/151Project/Library%20Helper%20Software/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_231-b11
+user.dir=C:\Users\duytr\iCloudDrive\Study\CS 151\Project\151Project\Library Helper Software
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

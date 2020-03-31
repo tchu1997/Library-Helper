@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="304.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.helper.ui.addmember.Add_memberController">
+   <children>
+      <VBox layoutX="101.0" layoutY="29.0" prefHeight="304.0" prefWidth="422.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="name" labelFloat="true" promptText="Name">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Text fx:id="nameErr" fill="#dd5d2a" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="id" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Member ID">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Text fx:id="idErr" fill="#dd5d2a" layoutX="10.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="email" labelFloat="true" layoutX="10.0" layoutY="36.0" promptText="Email Address">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Text fx:id="emailErr" fill="#dd5d2a" layoutX="10.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="phone" labelFloat="true" layoutX="10.0" layoutY="61.0" promptText="Phone Number">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <Text fx:id="phoneErr" fill="#dd5d2a" layoutX="10.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="48.0" prefWidth="422.0">
+               <children>
+                  <JFXButton fx:id="addButton" onAction="#addMember" prefHeight="62.0" prefWidth="216.0" stylesheets="@add_member.css" text="Save">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="62.0" prefWidth="216.0" stylesheets="@add_member.css" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

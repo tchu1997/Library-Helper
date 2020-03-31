@@ -1,0 +1,8 @@
+right click inside a folder, chose git bash
+in git bash:
+git clone link
+git status
+git add .
+git commit -m "message"
+git push origin master
+git pull (download)

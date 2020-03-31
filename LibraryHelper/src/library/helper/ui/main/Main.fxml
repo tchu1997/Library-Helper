@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.helper.ui.main.MainController">
+   <children>
+      <BorderPane prefHeight="694.0" prefWidth="878.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#runSettings" text="Settings" />
+                    <MenuItem mnemonicParsing="false" onAction="#runMenuClose" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#editSelection" text="Edit Info" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteSelection" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="878.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab fx:id="issueTab" text="Book Issue">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="878.0">
+                           <children>
+                              <Text layoutX="56.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" AnchorPane.bottomAnchor="659.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="747.27099609375" AnchorPane.topAnchor="21.0" />
+                              <TextField fx:id="member_id_entered" layoutX="148.0" layoutY="16.0" onAction="#retrieveMember" promptText="Search" AnchorPane.leftAnchor="148.0" AnchorPane.topAnchor="16.0" />
+                              <ScrollPane layoutX="14.0" layoutY="256.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="256.0">
+                                 <content>
+                                    <TableView fx:id="bookCartTable" prefHeight="354.0" prefWidth="850.0">
+                                      <columns>
+                                        <TableColumn fx:id="cart_titleCol" prefWidth="200.0" text="Title" />
+                                        <TableColumn fx:id="cart_idCol" prefWidth="188.0" text="Book ID" />
+                                          <TableColumn fx:id="cart_authorCol" prefWidth="239.0" text="Author" />
+                                          <TableColumn fx:id="cart_publisherCol" prefWidth="206.0" text="Publisher" />
+                                      </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="book_id_entered" layoutX="562.0" layoutY="16.0" onAction="#retrieveBook" onKeyPressed="#disableAddButtonWhileTyping" prefHeight="31.0" prefWidth="164.0" promptText="Search" AnchorPane.rightAnchor="152.0" />
+                              <Text layoutX="502.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book ID" AnchorPane.bottomAnchor="659.0" AnchorPane.rightAnchor="331.56" />
+                              <Button fx:id="addToCartButton" disable="true" layoutX="737.0" layoutY="16.0" mnemonicParsing="false" onAction="#addBookToCart" text="Add to cart" textFill="#111111" AnchorPane.bottomAnchor="654.0" AnchorPane.rightAnchor="21.0">
+                                 <graphic>
+                                    <ImageView fitHeight="49.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/shopping-cart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Text layoutX="78.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" AnchorPane.bottomAnchor="606.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="747.27099609375" />
+                              <Text layoutX="48.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" AnchorPane.bottomAnchor="566.0" AnchorPane.leftAnchor="31.84033203125" AnchorPane.rightAnchor="753.15966796875" />
+                              <Text layoutX="43.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="23.84033203125" AnchorPane.rightAnchor="753.15966796875" />
+                              <Text layoutX="523.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" AnchorPane.bottomAnchor="606.0" AnchorPane.rightAnchor="331.564453125" />
+                              <Text layoutX="505.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" AnchorPane.bottomAnchor="566.0" AnchorPane.rightAnchor="336.1201171875" />
+                              <Text layoutX="497.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publisher" AnchorPane.bottomAnchor="526.0" AnchorPane.rightAnchor="330.4091796875" />
+                              <Text layoutX="492.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability" AnchorPane.bottomAnchor="486.0" AnchorPane.rightAnchor="327.76025390625" />
+                              <Button fx:id="issueBookButton" layoutX="509.0" layoutY="636.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="31.0" prefWidth="106.0" text="Issue" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="249.0" />
+                              <Button fx:id="clearCartButton" layoutX="386.0" layoutY="636.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="31.0" prefWidth="106.0" text="Clear Cart" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="386.0" />
+                              <Text fx:id="nameDes" layoutX="148.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="606.2578125" AnchorPane.leftAnchor="148.0" />
+                              <Text fx:id="emailDes" layoutX="148.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="566.0" />
+                              <Text fx:id="phoneDes" layoutX="148.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="526.0" />
+                              <Text fx:id="titleDes" layoutX="569.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="606.0" />
+                              <Text fx:id="authorDes" layoutX="569.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="566.2578125" />
+                              <Text fx:id="publisherDes" layoutX="569.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="524.2578125" />
+                              <Text fx:id="availDes" fill="#39b569" layoutX="569.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="486.0" />
+                              <Text fx:id="member_id_error" fill="#d03434" layoutX="148.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="632.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="book_id_error" fill="#d03434" layoutX="569.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="632.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="removeCartButton" disable="true" layoutX="249.0" layoutY="636.0" mnemonicParsing="false" onAction="#removeBookFromCart" prefHeight="31.0" prefWidth="106.0" text="Remove" textFill="#111111" AnchorPane.leftAnchor="249.0">
+                                 <graphic>
+                                    <ImageView fitHeight="49.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/cart%20remove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="renewTab" text="Renew/Submission">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="878.0">
+                           <children>
+                              <Text layoutX="56.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" AnchorPane.bottomAnchor="659.0" AnchorPane.topAnchor="21.0" />
+                              <TextField fx:id="memberID_input" layoutX="148.0" layoutY="16.0" onAction="#handlerMemberID" promptText="Search " AnchorPane.leftAnchor="148.0" AnchorPane.topAnchor="16.0" />
+                              <ScrollPane layoutX="14.0" layoutY="228.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="228.0">
+                                 <content>
+                                    <TableView fx:id="IssuedBookTable" prefHeight="373.0" prefWidth="850.0">
+                                       <columns>
+                                          <TableColumn fx:id="rTitleCol" prefWidth="157.0" text="Book Title" />
+                                          <TableColumn fx:id="rBookIdCol" prefWidth="108.0" text="Book ID" />
+                                          <TableColumn fx:id="rAuthorCol" prefWidth="134.0" text="Author" />
+                                          <TableColumn fx:id="rPubCol" prefWidth="139.0" text="Publisher" />
+                                          <TableColumn fx:id="rIssuedTimeCol" prefWidth="182.0" text="IssuedTime" />
+                                          <TableColumn fx:id="rRenewCountCol" maxWidth="1.7976931348623157E308" prefWidth="110.0" text="Renew Count" />
+                                       </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <Text layoutX="78.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" AnchorPane.bottomAnchor="606.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="752.2841796875" />
+                              <Text layoutX="48.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" AnchorPane.bottomAnchor="566.0" AnchorPane.leftAnchor="31.84033203125" AnchorPane.rightAnchor="750.5205078125" />
+                              <Text layoutX="47.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" AnchorPane.bottomAnchor="526.0" AnchorPane.rightAnchor="753.15966796875" />
+                              <Button fx:id="returnButton" layoutX="386.0" layoutY="630.0" mnemonicParsing="false" onAction="#runReturn" prefHeight="31.0" prefWidth="106.0" text="Submission" AnchorPane.bottomAnchor="34.5" AnchorPane.rightAnchor="316.0" />
+                              <Button fx:id="renewButton" layoutX="282.0" layoutY="636.0" mnemonicParsing="false" onAction="#runRenew" prefHeight="31.0" prefWidth="106.0" text="Renew" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="316.0" />
+                              <Text fx:id="nameR" layoutX="148.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="606.0" />
+                              <Text fx:id="emailR" layoutX="148.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="566.0" />
+                              <Text fx:id="phoneR" layoutX="148.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="526.0" />
+                              <Text fx:id="memberError" fill="#ee0808" layoutX="326.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="659.0" AnchorPane.leftAnchor="350.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="bookTab" text="Books">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="878.0">
+                           <children>
+                              <ScrollPane layoutX="14.0" layoutY="66.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="66.0">
+                                 <content>
+                                    <TableView fx:id="bookTable" prefHeight="618.0" prefWidth="892.0">
+                                      <columns>
+                                        <TableColumn fx:id="titleCol" prefWidth="200.0" text="Title" />
+                                        <TableColumn fx:id="idCol" prefWidth="120.0" text="Book ID" />
+                                          <TableColumn fx:id="authorCol" prefWidth="199.0" text="Author" />
+                                          <TableColumn fx:id="publisherCol" prefWidth="191.0" text="Publisher" />
+                                          <TableColumn fx:id="availCol" prefWidth="145.0" text="Availability" />
+                                      </columns>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" onAction="#refreshTable" text="Refresh" />
+                                                <MenuItem mnemonicParsing="false" onAction="#editSelection" text="Edit" />
+                                                <MenuItem mnemonicParsing="false" onAction="#deleteSelection" text="Delete" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="searchBookField" alignment="TOP_LEFT" layoutX="14.0" layoutY="16.0" onKeyPressed="#searchBook" prefHeight="31.0" prefWidth="187.0" promptText="Search a book..." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="16.0" />
+                              <Button fx:id="addBookButton" layoutX="757.0" layoutY="16.0" mnemonicParsing="false" onAction="#displayAddBook" prefHeight="31.0" prefWidth="144.0" text="Add Book" AnchorPane.rightAnchor="14.0">
+                                 <graphic>
+                                    <ImageView fitHeight="11.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/add_book.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="memberTab" text="Members">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="878.0">
+                           <children>
+                              <ScrollPane layoutX="14.0" layoutY="66.0" prefHeight="627.0" prefWidth="867.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="66.0">
+                                 <content>
+                                    <TableView fx:id="memberTable" prefHeight="618.0" prefWidth="912.0">
+                                       <columns>
+                                          <TableColumn fx:id="mNameCol" prefWidth="233.0" text="Name" />
+                                          <TableColumn fx:id="mIdCol" prefWidth="150.0" text="Member ID" />
+                                          <TableColumn fx:id="mEmailCol" prefWidth="233.0" text="Email Address" />
+                                          <TableColumn fx:id="mPhoneCol" prefWidth="233.0" text="Phone Number" />
+                                       </columns>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" onAction="#refreshTable" text="Refresh" />
+                                                <MenuItem mnemonicParsing="false" onAction="#editSelection" text="Edit" />
+                                                <MenuItem mnemonicParsing="false" onAction="#deleteSelection" text="Delete" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <TextField fx:id="searchMemberField" alignment="TOP_LEFT" layoutX="14.0" layoutY="16.0" onKeyPressed="#searchMember" promptText="Search a member..." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="16.0" />
+                              <Button fx:id="addMemberButton" layoutX="757.0" layoutY="16.0" mnemonicParsing="false" onAction="#displayAddMember" prefHeight="31.0" prefWidth="143.0" text="Add Member" AnchorPane.rightAnchor="14.0">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/add_member.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+.utility-button{
+    -fx-background-color: #d0d0e1;
+    -fx-text-fill: black;
+}
+
+.utility-button:hover{
+    -fx-background-color:  #b3d9ff;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="247.0" prefWidth="301.0" stylesheets="@../../../../utility/general.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.helper.ui.login.LoginController">
+   <children>
+      <Label fx:id="title" alignment="CENTER" layoutX="21.0" layoutY="14.0" prefHeight="49.0" prefWidth="328.0" styleClass="header-background" stylesheets="@login.css" text="Login" textAlignment="CENTER" textFill="#132038" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="username" layoutX="19.0" layoutY="64.0" onAction="#runLogin" prefHeight="27.0" prefWidth="263.0" promptText="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" layoutX="19.0" layoutY="114.0" onAction="#runLogin" prefHeight="27.0" prefWidth="263.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutY="197.0" onAction="#runLogin" prefHeight="50.0" prefWidth="150.0" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="150.0" layoutY="197.0" onAction="#runCancel" prefHeight="50.0" prefWidth="150.0" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="loginErr" fill="#f23939" layoutX="19.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
